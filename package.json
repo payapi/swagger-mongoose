@@ -1,6 +1,6 @@
 {
   "name": "payapi-swagger-mongoose",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Generate mongoose schemas and models from swagger documents with mongoose-encryption support",
   "main": "./lib/index.js",
   "directories": {
@@ -8,7 +8,8 @@
   },
   "dependencies": {
     "lodash": "^4.6.1",
-    "mongoose": "^4.4.9"
+    "mongoose": "^4.4.9",
+    "mongoose-encryption": "^1.4.0"
   },
   "devDependencies": {
     "async": "^2.0.0-rc.1",
@@ -22,13 +23,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/simonguest/swagger-mongoose"
+    "url": "https://github.com/payapi/swagger-mongoose"
   },
   "keywords": [
     "swagger",
     "mongoose",
+    "mongoose-encryption",
     "mongo",
-    "schema"
+    "schema",
+    "payapi"
   ],
   "author": "PayApi <support@payapi.io>; original author: Simon Guest <me@simonguest.com>",
   "contributors": [
@@ -45,7 +48,7 @@
     }
   ],
   "bugs": {
-    "url": "https://github.com/simonguest/swagger-mongoose/issues"
+    "url": "https://github.com/payapi/swagger-mongoose/issues"
   },
-  "homepage": "https://github.com/simonguest/swagger-mongoose"
+  "homepage": "https://github.com/payapi/swagger-mongoose"
 }
