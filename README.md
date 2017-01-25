@@ -1,17 +1,44 @@
 ![Travis Status](https://travis-ci.org/simonguest/swagger-mongoose.svg?branch=master)
-# swagger-mongoose
+# payapi-swagger-mongoose (original: swagger-mongoose)
 
-Generate mongoose schemas and models from swagger documents
+Generate mongoose schemas and models from swagger documents. Support mongoose-encryption for encrypted fields.
 
 ## Usage
 
 Simply pass your swagger document to the compile method, and then dynamically access the underlying mongoose models.
 
+For encrypted fields, you may pass the encryption parameters for selected models which will use the mongoose-encryption module to do transparent application level encryption (TDE).
+
+Please note that restrictions of mongoose-encryption apply, e.g. do not encrypt indexed fields or do not try to use mongoose.update() for encrypted fields.
+
 ```js
-var swaggerMongoose = require('swagger-mongoose');
+var swaggerMongoose = require('payapi-swagger-mongoose');
 
 var swagger = fs.readFileSync('./petstore.json');
 var Pet = swaggerMongoose.compile(swagger).models.Pet;
+var myPet = new Pet({
+    id: 123,
+    name: 'Fluffy'
+    });
+myPet.save();
+```
+
+Or with encryption enabled:
+
+```js
+var swaggerMongoose = require('payapi-swagger-mongoose');
+
+var swagger = fs.readFileSync('./petstore.json');
+var Pet = swaggerMongoose.compile(swagger, null, {
+  enc: 'YOUR_ENCRYPTION_KEY'
+  sig: 'YOUR_SIGNING_KEY',
+  encryptedSchemas: [
+    {
+      name: 'Pet',
+      fields: ['name']
+    }
+  ]
+}).models.Pet;
 var myPet = new Pet({
     id: 123,
     name: 'Fluffy'
@@ -154,7 +181,7 @@ phone:
 ## Installation
 
 ```js
-npm install swagger-mongoose
+npm install payapi-swagger-mongoose
 ```
 
 ## Limitations
@@ -165,7 +192,7 @@ swagger-mongoose does not yet perform/create any validation from the swagger def
 
 ## License
 
-Copyright 2016 Simon Guest and other contributors
+Copyright 2017 PayApi and other contributors
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

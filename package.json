@@ -1,13 +1,14 @@
 {
-  "name": "swagger-mongoose",
-  "version": "1.1.2",
-  "description": "Generate mongoose schemas and models from swagger documents",
+  "name": "payapi-swagger-mongoose",
+  "version": "1.2.0",
+  "description": "Generate mongoose schemas and models from swagger documents with mongoose-encryption support",
   "main": "./lib/index.js",
   "directories": {
     "test": "test"
   },
   "dependencies": {
-    "lodash": "^4.6.1"
+    "lodash": "^4.6.1",
+    "mongoose-encryption": "^1.4.0"
   },
   "devDependencies": {
     "async": "^2.0.0-rc.1",
@@ -22,18 +23,32 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/simonguest/swagger-mongoose"
+    "url": "https://github.com/payapi/swagger-mongoose"
   },
   "keywords": [
     "swagger",
     "mongoose",
+    "mongoose-encryption",
     "mongo",
-    "schema"
+    "schema",
+    "payapi"
   ],
-  "author": "Simon Guest <me@simonguest.com> (http://github.com/simonguest)",
-  "license": "Apache 2",
+  "author": "PayApi <support@payapi.io>; original author: Simon Guest <me@simonguest.com>",
+  "contributors": [
+    {
+      "name": "Matti Vilola",
+      "email": "matti@payapi.io",
+      "url": "https://es.linkedin.com/in/mattivilola"
+    }
+  ],
+  "licenses": [
+    {
+      "type": "Apache 2",
+      "url": "https://opensource.org/licenses/Apache-2.0"
+    }
+  ],
   "bugs": {
-    "url": "https://github.com/simonguest/swagger-mongoose/issues"
+    "url": "https://github.com/payapi/swagger-mongoose/issues"
   },
-  "homepage": "https://github.com/simonguest/swagger-mongoose"
+  "homepage": "https://github.com/payapi/swagger-mongoose"
 }
