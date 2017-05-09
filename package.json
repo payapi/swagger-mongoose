@@ -1,23 +1,23 @@
 {
   "name": "payapi-swagger-mongoose",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "Generate mongoose schemas and models from swagger documents with mongoose-encryption support",
   "main": "./lib/index.js",
   "directories": {
     "test": "test"
   },
   "dependencies": {
-    "debug": "2.6.6",
-    "lodash": "4.6.1",
-    "mongoose": "4.4.9",
-    "mongoose-encryption": "1.4.0"
+    "debug": "^2.6.6",
+    "lodash": "^4.6.1",
+    "mongoose": "^4.4.9",
+    "mongoose-encryption": "^1.4.0"
   },
   "devDependencies": {
-    "async": "2.0.0-rc.1",
-    "chai": "3.5.0",
-    "mocha": "2.4.5",
-    "mockgoose": "6.0.0",
-    "mongodb": "2.1.11"
+    "async": "^2.0.0-rc.1",
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5",
+    "mockgoose": "^6.0.0",
+    "mongodb": "^2.1.11"
   },
   "scripts": {
     "test": "mocha"
