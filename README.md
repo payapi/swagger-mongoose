@@ -3,6 +3,8 @@
 
 Generate mongoose schemas and models from swagger documents. Support mongoose-encryption for encrypted fields.
 
+***PLEASE NOTE:*** All PayApi related changes have been published and pushed into the [*master_payapi-swagger-mongoose*](https://github.com/payapi/swagger-mongoose/tree/master_payapi-swagger-mongoose) branch.
+
 ## Usage
 
 Simply pass your swagger document to the compile method, and then dynamically access the underlying mongoose models.
