@@ -1,6 +1,6 @@
 {
   "name": "payapi-swagger-mongoose",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "description": "Generate mongoose schemas and models from swagger documents with mongoose-encryption support",
   "main": "./lib/index.js",
   "directories": {
