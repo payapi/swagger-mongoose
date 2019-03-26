@@ -7,17 +7,16 @@
     "test": "test"
   },
   "dependencies": {
-    "debug": "^2.6.6",
-    "lodash": "^4.6.1",
-    "mongoose": "^4.4.9",
-    "mongoose-encryption": "^1.4.0"
+    "debug": "2.6.6",
+    "lodash": "4.6.1",
+    "mongoose-encryption": "2.0.2",
+    "mongoose": "5.4.20"
   },
   "devDependencies": {
-    "async": "^2.0.0",
+    "async": "2.6.2",
     "chai": "^3.5.0",
     "mocha": "^2.4.5",
-    "mockgoose": "^7.0.0",
-    "mongoose": "^4.8.6"
+    "mockgoose": "^7.0.0"
   },
   "peerDependencies": {
     "mongoose": "^4.8.6"
