@@ -13,14 +13,17 @@
     "mongoose-encryption": "^1.4.0"
   },
   "devDependencies": {
-    "async": "^2.0.0-rc.1",
+    "async": "^2.0.0",
     "chai": "^3.5.0",
     "mocha": "^2.4.5",
-    "mockgoose": "^6.0.0",
-    "mongodb": "^2.1.11"
+    "mockgoose": "^7.0.0",
+    "mongoose": "^4.8.6"
+  },
+  "peerDependencies": {
+    "mongoose": "^4.8.6"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha --timeout 60000"
   },
   "repository": {
     "type": "git",
