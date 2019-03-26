@@ -77,8 +77,9 @@ describe('swagger-mongoose tests', function () {
       id: 123
     });
     myPet.save(function (err) {
+      // console.log(err);
       assert(err, 'Validation error is missing');
-      assert(err.message === 'Pet validation failed', 'Unexpected error message');
+      assert(err.message === 'Pet validation failed: name: Path `name` is required.', 'Unexpected error message');
       done();
     });
   });
