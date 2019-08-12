@@ -15,6 +15,7 @@
   "devDependencies": {
     "async": "2.6.2",
     "chai": "^3.5.0",
+    "lodash": "^4.6.1",
     "mocha": "^2.4.5",
     "mockgoose": "^7.0.0"
   },
