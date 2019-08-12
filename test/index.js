@@ -15,7 +15,12 @@ describe('swagger-mongoose tests', function () {
 
   before(function(done) {
     mockgoose.prepareStorage().then(function() {
-      mongoose.connect('mongodb://127.0.0.1:27017/TestingDB', function(err) {
+      var dbOptions = {
+        useCreateIndex: true,
+        useNewUrlParser: true,
+        useFindAndModify: false
+      };
+      mongoose.connect('mongodb://127.0.0.1:27017/TestingDB', dbOptions, function(err) {
         done(err);
       });
     });
